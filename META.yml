@@ -1,0 +1,27 @@
+---
+abstract: 'local access to the standard and historical HTML DTDs.'
+author:
+  - 'Ashley Pond V.'
+build_requires:
+  ExtUtils::MakeMaker: 6.11
+  Test::More: 0
+distribution_type: module
+generated_by: 'Module::Install version 0.760'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: HTML-DTD
+no_index:
+  directory:
+    - share
+    - share
+    - inc
+    - t
+requires:
+  File::ShareDir: 0
+  Path::Class: 0
+  Scalar::Util: 0
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.01
