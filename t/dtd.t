@@ -6,7 +6,7 @@ use HTML::DTD;
 ok( my $html_dtd = HTML::DTD->new(),
     "new()" );
 
-my @dtd = qw(
+my @dtd = sort qw(
              html-0.dtd
              html-1.dtd
              html-1s.dtd
@@ -28,7 +28,6 @@ my @dtd = qw(
              xhtml1-transitional.dtd
              xhtml11.dtd
            );
-
 
 is_deeply( [ $html_dtd->dtds ], \@dtd,
            "Expected DTDs are available from object method dtds()" );

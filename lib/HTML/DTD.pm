@@ -8,7 +8,7 @@ use Carp qw( carp confess croak );
 use File::ShareDir ();
 use Path::Class;
 
-our $VERSION = "0.02";
+our $VERSION = "0.03";
 
 sub new : method {
     my $caller = shift;
@@ -22,7 +22,7 @@ sub dtds : method {
     croak "No arguments allowed to dtds()" if @_;
     my $dir = Path::Class::Dir->new( File::ShareDir::dist_dir("HTML-DTD") );
     opendir my $dh, $dir or die "Could not open '$dir' for reading: $!";
-    return grep /\.dtd\z/, readdir $dh;
+    return sort grep /\.dtd\z/, readdir $dh;
 }
 
 sub get_dtd_fh {
@@ -66,7 +66,7 @@ HTML::DTD - local access to the standard and historical HTML DTDs.
 
 =head1 VERSION
 
-0.02
+0.03
 
 =head1 SYNOPSIS
 

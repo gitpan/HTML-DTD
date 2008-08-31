@@ -1,5 +1,8 @@
 Revision history for HTML::DTD
 
+0.03    20080831
+        - Sort dtds() to fix a test failure.
+
 0.02    20080831
         - Added list of names to the Pod.
 
