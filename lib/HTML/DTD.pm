@@ -8,7 +8,7 @@ use Carp qw( carp confess croak );
 use File::ShareDir ();
 use Path::Class;
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 sub new : method {
     my $caller = shift;
@@ -66,7 +66,7 @@ HTML::DTD - local access to the standard and historical HTML DTDs.
 
 =head1 VERSION
 
-0.01
+0.02
 
 =head1 SYNOPSIS
 
@@ -107,8 +107,29 @@ Returns a L<Path::Class> object for the DTD.
 
 =item B<dtds>
 
-Returns a list of the available DTD names.
+Returns a list of the available DTD names. Currently available-
 
+    html-0.dtd
+    html-1.dtd
+    html-1s.dtd
+    html-2-strict.dtd
+    html-2.dtd
+    html-3-2.dtd
+    html-3-strict.dtd
+    html-3.dtd
+    html-4-0-1-frameset.dtd
+    html-4-0-1-loose.dtd
+    html-4-0-1-strict.dtd
+    html-4-frameset.dtd
+    html-4-loose.dtd
+    html-4.strict.dtd
+    html-cougar.dtd
+    html.dtd
+    xhtml1-frameset.dtd
+    xhtml1-strict.dtd
+    xhtml1-transitional.dtd
+    xhtml11.dtd
+    
 =back
 
 =head1 TODO

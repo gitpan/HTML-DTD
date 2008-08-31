@@ -1,4 +1,7 @@
 Revision history for HTML::DTD
 
+0.02    20080831
+        - Added list of names to the Pod.
+
 0.01    20080831
         - First release. Wahoo.
