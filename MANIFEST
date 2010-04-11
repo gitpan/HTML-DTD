@@ -33,9 +33,14 @@ share/html-4-loose.dtd
 share/html-4.strict.dtd
 share/html-cougar.dtd
 share/html.dtd
+share/xhtml-lat1.ent
+share/xhtml-special.ent
+share/xhtml-symbol.ent
+share/xhtml.soc
 share/xhtml1-frameset.dtd
 share/xhtml1-strict.dtd
 share/xhtml1-transitional.dtd
+share/xhtml1.dcl
 share/xhtml11.dtd
 t/00-load.t
 t/dtd.t

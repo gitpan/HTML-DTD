@@ -8,7 +8,7 @@ use Carp qw( carp confess croak );
 use File::ShareDir ();
 use Path::Class;
 
-our $VERSION = "0.03";
+our $VERSION = "0.04";
 
 sub new : method {
     my $caller = shift;
@@ -27,7 +27,7 @@ sub dtds : method {
 
 sub get_dtd_fh {
     my $arg = shift;
-    my $dtd = shift if $arg eq __PACKAGE__ or blessed( $arg ) eq __PACKAGE__;
+    my $dtd = shift if $arg eq __PACKAGE__ or blessed($arg) eq __PACKAGE__;
     $dtd ||= $arg;
     croak "DTD name required" unless $dtd;
     my $file = File::ShareDir::dist_file("HTML-DTD", $dtd);
@@ -37,7 +37,7 @@ sub get_dtd_fh {
 
 sub get_dtd_path {
     my $arg = shift;
-    my $dtd = shift if $arg eq __PACKAGE__ or blessed( $arg ) eq __PACKAGE__;
+    my $dtd = shift if $arg eq __PACKAGE__ or blessed($arg) eq __PACKAGE__;
     $dtd ||= $arg;
     croak "DTD name required" unless $dtd;
     return Path::Class::File->new( File::ShareDir::dist_file("HTML-DTD", $dtd) );
@@ -45,7 +45,7 @@ sub get_dtd_path {
 
 sub get_dtd {
     my $arg = shift;
-    my $dtd = shift if $arg eq __PACKAGE__ or blessed( $arg ) eq __PACKAGE__;
+    my $dtd = shift if $arg eq __PACKAGE__ or blessed($arg) eq __PACKAGE__;
     $dtd ||= $arg;
     croak "DTD name required" unless $dtd;
     my $file = File::ShareDir::dist_file("HTML-DTD", $dtd);
@@ -60,13 +60,15 @@ sub get_dtd {
 
 __END__
 
+=pod
+
 =head1 NAME
 
 HTML::DTD - local access to the standard and historical HTML DTDs.
 
 =head1 VERSION
 
-0.03
+0.04
 
 =head1 SYNOPSIS
 
@@ -129,18 +131,18 @@ Returns a list of the available DTD names. Currently available-
     xhtml1-strict.dtd
     xhtml1-transitional.dtd
     xhtml11.dtd
-    
+
 =back
 
 =head1 TODO
 
 Should probably have an author test which compares the DTDs to their URIs.
 
-Speaking of which... there should probably be the necessary header strings available for each DTD as a courtesy, along with adjunct documents like entities...
+Speaking of which... there should probably be the necessary header strings available for each DTD as a courtesy.
 
 =head1 BUGS AND LIMITATIONS
 
-This is half a stub module to bring in soemthing I find useful: locally installed and easily found DTDs. I can imagine other ways it could be useful but don't yet have clear need myself. If you do, please let me know. I love good feedback and bug reports. Please report any bugs or feature requests directly to me via email or through the web interface at L<http://rt.cpan.org/Public/Dist/Display.html?Name=HTML::DTD>.
+This is half a stub module to bring in something I find useful: locally installed and easily found DTDs. I can imagine other ways it could be useful but don't yet have clear need myself. If you do, let me know. I love good feedback and bug reports. Please report any bugs or feature requests directly to me via email or through the web interface at L<http://rt.cpan.org/Public/Dist/Display.html?Name=HTML::DTD>.
 
 =head1 SEE ALSO
 
@@ -148,7 +150,7 @@ L<Path::Class>.
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright (E<copy>) 2008 Ashley Pond V.
+Copyright (E<copy>) 2008-2010 Ashley Pond V.
 
 This program is free software; you can redistribute it or modify it or
 both under the same terms as Perl itself.
